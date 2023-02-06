@@ -7,6 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let animals = new Set([
+            "Lion",
+            "Eagle",
+            "Bison",
+            "Shark",
+            "Tiger",
+        ]);
+
+        //Cong them dong vat
+        document.write('<strong>Danh sach dong vat hien tai:</strong> <br>');
+        for(let item of animals.values()){
+            document.write(item + '<br>');
+        }
+        console.log(animals);
+
+        //kiem tra dong vat do co nam trong ds khong?
+        let a = "Lion";
+        if(animals.has(a)){
+            document.write('<br>' + a + ": Có trong danh sách <br>"); 
+        }
+
+        let b = "Eagle";
+        document.write('<br>Them ten dong vat moi: ' + b);
+        document.write('<br><br><strong>Danh sách mới:</strong> <br>')
+        animals.add(b);
+        for(let item of animals.values()){
+            document.write(item + '<br>');
+        };
+
+        let c = "Bison";
+        document.write('<br>Xoa ten dong vat moi: ' + c);
+        document.write('<br><br><strong>Danh sách mới:</strong> <br>')
+        animals.delete(c);
+        for(let item of animals.values()){
+            document.write(item + '<br>');
+        };
+    </script>
 </body>
 </html>
